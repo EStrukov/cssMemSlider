@@ -1,0 +1,227 @@
+* {
+  --main-size: 40vw;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #94530c, #14aad7);
+  width: 100%;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+li {
+  list-style-type: none;
+}
+
+.slider {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+}
+
+.slides {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: var(--main-size);
+  height: var(--main-size);
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  width: var(--main-size);
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+img {
+  width: var(--main-size);
+}
+
+input {
+  display: none;
+}
+
+.footer__wrap {
+  margin-top: 1em;
+  width: var(--main-size);
+  display: flex;
+  justify-content: space-between;
+}
+
+.text__wrap {
+  height: 4em;
+  overflow: hidden;
+}
+
+.text {
+  color: #ddd;
+  height: 4em;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+
+}
+
+input#r1:checked~.slides>.slide {
+  transform: translate(0);
+}
+
+input#r2:checked~.slides>.slide {
+  transform: translate(-100%);
+}
+
+input#r3:checked~.slides>.slide {
+  transform: translate(-200%);
+}
+
+input#r4:checked~.slides>.slide {
+  transform: translate(-300%);
+}
+
+input#r5:checked~.slides>.slide {
+  transform: translate(-400%);
+}
+
+input#r6:checked~.slides>.slide {
+  transform: translate(-500%);
+}
+
+/* input#r7:checked~.slides>.slide {
+  transform: translate(-600%);
+}
+
+input#r8:checked~.slides>.slide {
+  transform: translate(-700%);
+}
+
+input#r9:checked~.slides>.slide {
+  transform: translate(-800%);
+} */
+
+input#r1:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(0);
+}
+
+input#r2:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-100%);
+}
+
+input#r3:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-200%);
+}
+
+input#r4:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-300%);
+}
+
+input#r5:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-400%);
+}
+
+input#r6:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-500%);
+}
+
+/* input#r7:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-600%);
+}
+
+input#r8:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-700%);
+}
+
+input#r9:checked~.footer__wrap>.text__wrap>.text {
+  transform: translateY(-800%);
+} */
+
+.controls {
+  display: flex;
+}
+
+label {
+  margin-left: 0.1vw;
+  height: 1.3em;
+  width: 1.3em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label span {
+  cursor: pointer;
+  display: block;
+  height: 0.5em;
+  width: 0.5em;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: background ease-in-out .5s;
+  -moz-transition: background ease-in-out .5s;
+  -o-transition: background ease-in-out .5s;
+  transition: background ease-in-out .5s;
+}
+
+label:hover span,
+#r1:checked~.footer__wrap>.controls>label:nth-of-type(1)>.r1__dot,
+#r2:checked~.footer__wrap>.controls>label:nth-of-type(2)>.r2__dot,
+#r3:checked~.footer__wrap>.controls>label:nth-of-type(3)>.r3__dot,
+#r4:checked~.footer__wrap>.controls>label:nth-of-type(4)>.r4__dot,
+#r5:checked~.footer__wrap>.controls>label:nth-of-type(5)>.r5__dot,
+#r6:checked~.footer__wrap>.controls>label:nth-of-type(6)>.r6__dot
+/* #r7:checked~.footer__wrap>.controls>label:nth-of-type(7)>.r7__dot,
+#r8:checked~.footer__wrap>.controls>label:nth-of-type(8)>.r8__dot,
+#r9:checked~.footer__wrap>.controls>label:nth-of-type(9)>.r9__dot */
+ {
+  background: #ddd;
+}
+
+label:active span {
+  background: #00fa00;
+}
+
+@media (max-width:768px) {
+
+  * {
+    --main-size: 15em;
+  }
+
+  .footer__wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text__wrap {
+    order: 2;
+  }
+
+  .controls {
+    width: 100%;
+    order: 1;
+    margin-bottom: 1em;
+    justify-content: space-around;
+  }
+
+}
