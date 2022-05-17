@@ -183,7 +183,7 @@ label span {
   transition: background ease-in-out .5s;
 }
 
-label:hover>.span,
+span:hover,
 #r1:checked~.footer__wrap>.controls>label:nth-of-type(1)>.r1__dot,
 #r2:checked~.footer__wrap>.controls>label:nth-of-type(2)>.r2__dot,
 #r3:checked~.footer__wrap>.controls>label:nth-of-type(3)>.r3__dot,
@@ -194,6 +194,10 @@ label:hover>.span,
 #r8:checked~.footer__wrap>.controls>label:nth-of-type(8)>.r8__dot,
 #r9:checked~.footer__wrap>.controls>label:nth-of-type(9)>.r9__dot {
   background: #ddd;
+}
+
+span:active {
+  background: #00fa00;
 }
 
 @media (max-width:768px) {
