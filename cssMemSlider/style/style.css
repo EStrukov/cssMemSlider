@@ -1,5 +1,5 @@
 * {
-  --main-size: 30em;
+  --main-size: 50vw;
 }
 
 body,
@@ -183,7 +183,7 @@ label span {
   transition: background ease-in-out .5s;
 }
 
-span:hover,
+label:hover span,
 #r1:checked~.footer__wrap>.controls>label:nth-of-type(1)>.r1__dot,
 #r2:checked~.footer__wrap>.controls>label:nth-of-type(2)>.r2__dot,
 #r3:checked~.footer__wrap>.controls>label:nth-of-type(3)>.r3__dot,
@@ -196,7 +196,7 @@ span:hover,
   background: #ddd;
 }
 
-span:active {
+label:active span {
   background: #00fa00;
 }
 
